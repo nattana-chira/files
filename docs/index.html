@@ -1,11 +1,19 @@
 <style>
-  #b2 { float: right; }
+  .b2 { float: right; }
 </style>
-<button onclick="myFunction()">X</button>
-<button id="b2" onclick="myFunction()">X</button>
+<button onclick="callBell()">Z</button>
+<button onclick="callAlarm()">X</button>
+
+<button class="b2" onclick="callBell()">Z</button>
+<button class="b2" onclick="callAlarm()">X</button>
 <script>
   var audio = new Audio('alarm_sound.mp3');
-function myFunction() {
+  var audio2 = new Audio('magic_chime_sound.mp3');
+
+function callAlarm() {
     audio.play();
+}
+function callBell() {
+    audio2.play();
 }
 </script>
